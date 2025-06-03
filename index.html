@@ -1,0 +1,274 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, height=1920, initial-scale=1.0, user-scalable=no">
+    <title>V 0.1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-screen">
+        <!-- Status Bar -->
+        <div class="status-bar-bar-bg"></div>
+        <div class="status-bar fixed-header">
+            <h1>
+                <img src="./KOLLER.png" alt="Koller Logo" class="koller-logo" />
+            </h1>
+        </div>
+
+        <!-- Clock Widget (fixed) -->
+        <div class="clock-bar-bg"></div>
+        <div class="clock-widget fixed-clock">
+            <div id="time"></div>
+            <div id="date"></div>
+        </div>
+
+        <!-- Main Content Area with drag-to-scroll (scrollable container) -->
+        <div class="main-scroll-area">
+            <div class="main-content">
+                <div class="app-grid">
+                    <!-- YouTube -->
+                    <a href="https://youtube.com" class="app-icon">
+                        <div class="icon-container youtube">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <span class="app-label">YouTube</span>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" class="app-icon">
+                        <div class="icon-container facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <span class="app-label">Facebook</span>
+                    </a>
+
+                    <!-- Adult Content Launcher -->
+                    <div class="app-icon" id="adultLauncherBtn"> 
+                        <div class="icon-container xvideos"> 
+                            <i class="fas fa-video"></i>
+                            <span class="adult-indicator">18+</span>
+                        </div>
+                        <span class="app-label">Adult Sites</span> 
+                    </div>
+
+                    <!-- Flickr -->
+                    <a href="https://flickr.com" class="app-icon">
+                        <div class="icon-container flickr">
+                            <i class="fab fa-flickr"></i>
+                        </div>
+                        <span class="app-label">Flickr</span>
+                    </a>
+
+                    <!-- Primfeed -->
+                    <a href="https://primfeed.com" class="app-icon">
+                        <div class="icon-container primfeed">
+                            <i class="fas fa-rss"></i>
+                        </div>
+                        <span class="app-label">Primfeed</span>
+                    </a>
+
+                    <!-- Games -->
+                    <div class="app-icon" id="gamesLauncherBtn">
+                        <div class="icon-container games">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <span class="app-label">Games</span>
+                    </div>
+
+                    <!-- Koller Store -->
+                    <a href="https://marketplace.secondlife.com/en-US/stores/238442" class="app-icon">
+                        <div class="icon-container koller-store">
+                            <!-- github block bypass: use a fallback logo stored in this repo or a relative image (replace the link below if needed) -->
+                            <img src="https://cdn.prod.website-files.com/60a83025d932b623a6a61ff8/6566244c4f78f9b996d50320_sllogo-web-login_233x112-02-01.svg" alt="Koller Store Logo" class="koller-store-logo">
+                        </div>
+                        <span class="app-label">Koller Store</span>
+                    </a>
+
+                    <!-- Streams Launcher -->
+                    <div class="app-icon" id="streamsLauncherBtn">
+                        <div class="icon-container streams">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <span class="app-label">Streams</span>
+                    </div>
+
+                    <!-- About Koller -->
+                    <a href="#" class="app-icon" id="aboutBtn">
+                        <div class="icon-container about">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <span class="app-label">About</span>
+                    </a>
+
+                    <!-- Spotify -->
+                    <a href="https://open.spotify.com/" class="app-icon">
+                        <div class="icon-container spotify">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <span class="app-label">Spotify</span>
+                    </a>
+                    
+                    <!-- Discord -->
+                    <a href="https://discord.gg/rtjFmmRhma" class="app-icon">
+                        <div class="icon-container discord">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <span class="app-label">Discord</span>
+                    </a>
+
+                    <!-- 3D -->
+                    <a href="https://3d-model-viewer--dexterkoller.on.websim.com/" class="app-icon">
+                        <div class="icon-container threed">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <span class="app-label">3D</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Search Bar (fixed above bottom navigation) -->
+        <div class="search-bar fixed-search-bar">
+            <form action="https://www.google.com/search" method="get" target="_self">
+                <input type="text" name="q" placeholder="Search Google...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <!-- Bottom Navigation (fixed) -->
+        <div class="bottom-nav fixed-footer">
+            <a href="#" class="nav-button" onclick="window.location.reload()">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-button" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+            <a href="#" class="nav-button" onclick="window.location.reload()">
+                <i class="fas fa-sync-alt"></i>
+                <span>Reload</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Small popup overlay -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="small-popup">
+            <h3>Made by Koller</h3>
+            <p>Any questions or issues contact</p>
+            <p><strong>DexterKoller Resident</strong></p>
+        </div>
+    </div>
+
+    <!-- Adult popup overlay -->
+    <div id="adultPopupOverlay" class="popup-overlay"> 
+        <div class="small-popup adult-popup"> 
+            <h3>Adult Content</h3>
+            <div class="adult-app-grid">
+                <a href="https://pornhub.com" class="adult-app-icon" target="_self"> 
+                    <div class="icon-container pornhub">
+                        <i class="fas fa-play-circle"></i> 
+                    </div>
+                    <span class="app-label">Pornhub</span>
+                </a>
+                <a href="https://xvideos.com" class="adult-app-icon" target="_self">
+                    <div class="icon-container xvideos-internal"> 
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <span class="app-label">XVideos</span>
+                </a>
+                <a href="https://tnaflix.com" class="adult-app-icon" target="_self">
+                    <div class="icon-container tnaflix">
+                         <i class="fas fa-film"></i> 
+                    </div>
+                    <span class="app-label">TNAflix</span>
+                </a>
+                <a href="https://xhamster.com" class="adult-app-icon" target="_self">
+                    <div class="icon-container xhamster">
+                        <i class="fas fa-camera"></i> 
+                    </div>
+                    <span class="app-label">Xhamster</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Streams popup overlay -->
+    <div id="streamsPopupOverlay" class="popup-overlay">
+        <div class="small-popup streams-popup">
+            <h3>Streaming Services</h3>
+            <div class="streams-app-grid">
+                <a href="https://www.netflix.com/" class="streams-app-icon" target="_self">
+                    <div class="icon-container netflix-internal">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <span class="app-label">Netflix</span>
+                </a>
+                <a href="https://www.amazon.com/gp/video/storefront" class="streams-app-icon" target="_self">
+                    <div class="icon-container amazon-internal">
+                         <i class="fas fa-film"></i>
+                    </div>
+                    <span class="app-label">Amazon</span>
+                </a>
+                <a href="https://www.disneyplus.com/" class="streams-app-icon" target="_self">
+                    <div class="icon-container disneyplus-internal">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="app-label">Disney+</span>
+                </a>
+                <a href="https://ev01.to/home" class="streams-app-icon" target="_self">
+                    <div class="icon-container ev01to-internal">
+                        <i class="fas fa-clapperboard"></i>
+                    </div>
+                    <span class="app-label">EV01.to</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games popup overlay -->
+    <div id="gamesPopupOverlay" class="popup-overlay">
+        <div class="small-popup games-popup">
+            <h3>Games</h3>
+            <div class="games-app-grid">
+                <a href="https://play.famobi.com/wrapper/drift-cup-racing/A1000-10" class="games-app-icon" target="_self">
+                    <div class="icon-container game-driftcup">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <span class="app-label">Drift Cup</span>
+                </a>
+                <a href="https://play.famobi.com/wrapper/drift-dudes/A1000-10" class="games-app-icon" target="_self">
+                    <div class="icon-container game-driftdudes">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <span class="app-label">Drift Dudes</span>
+                </a>
+                <a href="https://www.chess.com/play/computer" class="games-app-icon" target="_self">
+                    <div class="icon-container game-chess">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <span class="app-label">Chess</span>
+                </a>
+                <a href="https://www.crazygames.com/game/subway-surfers" class="games-app-icon" target="_self">
+                    <div class="icon-container game-subway">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <span class="app-label">Subway Surfers</span>
+                </a>
+                <a href="https://www.pacman.com/en/play/classic" class="games-app-icon" target="_self">
+                    <div class="icon-container game-pacman">
+                        <i class="fas fa-dot-circle"></i>
+                    </div>
+                    <span class="app-label">Pac-Man</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
