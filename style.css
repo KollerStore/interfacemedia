@@ -1,0 +1,484 @@
+:root {
+    --primary-bg: #191d23;
+    --main-accent: #e02d2d;
+    --secondary-accent: #fff;
+    --main-font: 'Roboto', sans-serif;
+    --mono-font: 'Share Tech Mono', monospace;
+    --title-font: 'Bebas Neue', cursive;
+    --app-shadow: 0 4px 12px #0004;
+    --koller-bar-bg: rgba(40,40,40,0.82); 
+    --clock-bar-bg: rgba(40,40,40,0.28);
+}
+
+/* Add a wallpaper background to phone screen */
+.phone-screen {
+    box-sizing: border-box;
+    width: 1024px;
+    height: 1920px;
+    margin: 0 auto;
+    background: var(--primary-bg);
+    border-radius: 52px;
+    box-shadow: 0 20px 60px rgba(32,32,32,0.5);
+    position: relative;
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #222;
+
+    /* Wallpaper */
+    background-image: url('./pngtree-elegant-black-and-orange-abstract-wave-background-image_912724.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.status-bar-bar-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;         
+    min-width: 100%;
+    height: 75px;        
+    z-index: 98;
+    background: var(--koller-bar-bg);
+    pointer-events: none;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    backdrop-filter: blur(2.5px);
+}
+
+.clock-bar-bg {
+    position: absolute;
+    top: 6px;
+    right: 28px;
+    width: 315px;
+    height: 52px;
+    z-index: 119;
+    background: var(--clock-bar-bg);
+    pointer-events: none;
+    border-radius: 19px;
+    backdrop-filter: blur(1.5px);
+    box-shadow: 0 2px 12px 0 #0004;
+}
+
+.fixed-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.fixed-clock {
+    position: absolute !important;
+    top: 12px !important; 
+    right: 42px !important;
+    z-index: 120;
+    background: none;
+    pointer-events: none;
+}
+
+.main-scroll-area {
+    flex: 1;
+    margin-top: 52px;  
+    margin-bottom: 0;  
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    overflow: auto;
+    min-height: 0;
+    max-height: calc(100% - 52px - 92px - 44px); 
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0 100px 0; 
+    overflow: visible;
+}
+
+.app-grid {
+    width: 86%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 90px;
+    gap: 54px 44px;
+    justify-items: center;
+}
+
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 102, 0, 0.68); 
+    box-shadow: var(--app-shadow);
+    border-radius: 36px;
+    width: 210px;
+    height: 56px; 
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.17s, transform 0.5s cubic-bezier(.1,.8,.2,1.2);
+    position: relative;
+    text-decoration: none;
+    border: 2.5px solid #24252d;
+    padding: 0;
+}
+
+.app-icon:hover {
+    background: rgba(255, 102, 0, 0.82); 
+    transform: translateY(-4px) scale(1.04);
+}
+
+.icon-container {
+    margin-top: -2px;  
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+.app-label {
+    font-family: var(--title-font);
+    color: #fff;
+    font-size: 1.63em;
+    text-shadow: 0 2px 6px #0009;
+    margin-top: -10px; 
+    margin-bottom: 0px; 
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    user-select: none;
+    line-height: 1em;
+}
+
+.youtube { color: #ff2d2d; }
+.facebook { color: #4267b2; }
+.xvideos { color: #e02d2d; position: relative;}
+.flickr { color: #f400a1; }
+.primfeed { color: #ff9900; }
+.marketplace { color: #19c37d;}
+.koller-store-logo {
+    width: 54px;
+    height: auto;
+    pointer-events: none;
+}
+.koller-store { 
+    background: transparent !important;
+}
+.streams { color: #e7df55;}
+.about { color: #ccc;}
+.games { color: #a468fd; }
+.game-megaslots { color: #ffae00; }
+.game-tetris { color: #2fd9e9; }
+.game-chess { color: #dfce5a; }
+.game-subway { color: #25e378; }
+.game-pacman { color: #ffd800; }
+.game-driftcup { color: #36c2d8; }
+.game-driftracing { color: #f36e2f; }
+.game-driftdudes { color: #f36e2f; }
+.spotify { color: #1db954; }
+.threed { color: #3ab3f9; }
+.discord { color: #5865F2; }
+
+.adult-indicator {
+    background: #ff2222;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 2px 7px;
+    border-radius: 10px;
+    position: absolute;
+    top: -7px;
+    right: -13px;
+    font-family: var(--mono-font);
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px #0007;
+    border: 1.5px solid #fff6;
+}
+
+.fixed-search-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 92px; 
+    z-index: 200;
+    width: 81%;
+    margin: 0 auto;
+}
+
+.fixed-search-bar form {
+    width: 100%;
+    display: flex;
+}
+
+.fixed-search-bar input[type="text"] {
+    flex: 1;
+    font-size: 1.3em;
+    padding: 10px 18px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    font-family: var(--main-font);
+    background: #181a1e;
+    color: #fff;
+    margin-right: 12px;
+}
+
+.fixed-search-bar button {
+    background: var(--main-accent);
+    border: none;
+    border-radius: 18px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.17s;
+}
+
+.fixed-search-bar button:hover {
+    background: #c21717;
+}
+
+.clock-widget {
+    color: #fff;
+    font-family: var(--mono-font);
+    text-align: right;
+    font-size: 2.05em;
+    user-select: none;
+    letter-spacing: 0.5px;
+}
+
+#date {
+    font-size: 1.4rem;
+    color: #d0d6e6;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.bottom-nav {
+    width: 100%;
+    background: #23262b;
+    border-top: 2.5px solid #292b30;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.fixed-footer {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    z-index: 150;
+}
+
+.nav-button {
+    color: #bbc7e6;
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.05em;
+    text-decoration: none;
+    transition: color 0.15s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-button:hover {
+    color: var(--main-accent);
+}
+
+.nav-button span {
+    font-size: 0.55em;
+    letter-spacing: 1.2px;
+    margin-top: 2px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #151622b3;
+    z-index: 5550;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.small-popup {
+    background: #24272e;
+    color: #fff;
+    border-radius: 22px;
+    padding: 56px 54px;
+    box-shadow: 0 8px 42px #0006;
+    min-width: 350px;
+    max-width: 540px;
+    width: 100%;
+    text-align: center;
+    font-family: var(--main-font);
+    position: relative;
+    z-index: 5600;
+}
+
+.small-popup h3 {
+    font-family: var(--title-font);
+    font-size: 2.2em;
+    color: var(--main-accent);
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.small-popup p {
+    font-size: 1.2em;
+    color: #bbc7e6;
+}
+
+.adult-popup .adult-app-grid,
+.streams-popup .streams-app-grid,
+.games-popup .games-app-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    justify-content: center;
+    margin-top: 13px;
+}
+
+.adult-app-icon, .streams-app-icon, .games-app-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 102, 0, 0.44); 
+    border-radius: 16px;
+    width: 145px;
+    height: 122px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1.3px solid #35385c;
+    transition: background 0.16s;
+    margin-bottom: 8px;
+}
+
+.adult-app-icon:hover, .streams-app-icon:hover, .games-app-icon:hover {
+    background: rgba(255, 102, 0, 0.60); 
+    box-shadow: 0 2px 14px #a026266b;
+}
+
+.games-app-icon:hover {
+    background: rgba(255, 102, 0, 0.72); 
+    box-shadow: 0 2px 14px #7a40eabb;
+}
+
+.adult-app-icon .icon-container,
+.streams-app-icon .icon-container,
+.games-app-icon .icon-container {
+    font-size: 2.9em;
+    margin: 22px 0 10px 0;
+}
+
+.games-app-icon .icon-container {
+    font-size: 2.4em;
+}
+
+.pornhub { color:#f79b2d; }
+.xhamster { color:#b6b6bb; }
+.xvideos-internal { color:#e02d2d; }
+.tnaflix { color:#69c8fa; }
+.netflix-internal { color:#e50815; }
+.amazon-internal { color:#00a9ff;}
+.disneyplus-internal { color:#13cef6;}
+.ev01to-internal { color:#fafd7c;}
+
+.koller-logo {
+    width: 202px;  
+    height: auto;
+    margin: 6px 0 0 32px;
+    display: block;
+}
+
+@media (max-width: 1024px), (max-height: 1920px) {
+    html, body {
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+    .phone-screen {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+    .main-scroll-area {
+        width: 100vw;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .main-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .app-grid {
+        width: 95%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px 10px;
+        grid-auto-rows: 70px;
+    }
+    .app-icon {
+        width: 32vw;
+        max-width: 230px;
+        height: 10vw;
+        max-height: 70px;
+        min-height: 52px;
+    }
+    .icon-container {
+        margin-top: -2px;
+        margin-bottom: 0;
+    }
+    .app-label {
+        margin-top: -7px;
+        margin-bottom: 0px;
+    }
+    .status-bar-bar-bg {
+        height: 9vw;    
+        min-height: 48px;
+        max-height: 82px;
+        width: 100vw;
+        left: 0;
+        border-radius: 0 0 30px 30px;
+    }
+    .fixed-clock {
+        top: 1vw !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #262d39;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #23262b;
+    border-radius: 7px;
+}
